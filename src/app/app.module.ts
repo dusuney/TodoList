@@ -8,6 +8,7 @@ import { TasksComponent } from "./tasks/tasks.component";
 
 import { routing, appRoutingProviders } from './app.routing';
 import { FormsModule } from "@angular/forms";
+import {TaskService} from './task.service';
 
 @NgModule({
     imports: [
@@ -22,7 +23,8 @@ import { FormsModule } from "@angular/forms";
         TasksComponent
     ],
     providers: [
-        appRoutingProviders
+        appRoutingProviders,
+        TaskService
     ],
     bootstrap: [AppComponent]
 })

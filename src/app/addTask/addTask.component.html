@@ -2,10 +2,10 @@
 
 <div class="col-md-4">
     <label for="name">Name</label>
-    <input type="text" class="form-control" name="name" placeholder="enter name task...">
+    <input type="text" class="form-control" [(ngModel)]="task.name" name="name" placeholder="enter name task...">
     <br>
     <label for="text">Text</label>
-    <input type="text" class="form-control" name="text" placeholder="enter text task...">
+    <input type="text" class="form-control" [(ngModel)]="task.text" name="text" placeholder="enter text task...">
     <br>
-    <a class="btn btn-default" href="#" role="button">Сохранить</a>
+    <a class="btn btn-default" role="button" (click)="addTask()">Сохранить</a>
 </div>

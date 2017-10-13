@@ -1,31 +1,19 @@
 import { Component, OnInit } from "@angular/core";
 import { Task } from '../Task';
+import { TaskService } from "../task.service";
+
 @Component({
     selector: "tasks",
     templateUrl: "./app/tasks/tasks.component.html"
 })
 export class TasksComponent {
+    tasks: Task[];
+
     ngOnInit() {
         console.log("Application component initialized ...");
+        this.taskService.get()
+            .then(data => this.tasks = data);
     }
 
-    tasks: Task[] = [
-        {
-            id: 0,
-            name: "Item 1",
-            text: "Text..."
-        },
-        {
-            id: 1,
-            name: "Item 2",
-            text: "Text..."
-        },
-        {
-            id: 2,
-            name: "Item 2",
-            text: "Text..."
-        }
-    ];
-
-   
+    constructor(private taskService: TaskService) { }
 } 
