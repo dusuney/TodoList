@@ -1,0 +1,6 @@
+<br>
+<div class="list-group">
+    <a *ngFor="let task of tasks" [routerLink]="['/viewTask', task.id]" href="#" class="list-group-item">
+            {{task.name}}
+        </a>
+</div>

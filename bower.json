@@ -1,0 +1,17 @@
+{
+  "name": "angular2-typescript-gulp",
+  "description": "Angular2 with TypeScript and Gulp QuickStart",
+  "main": "",
+  "authors": [
+    "Artem Avanesyan"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
