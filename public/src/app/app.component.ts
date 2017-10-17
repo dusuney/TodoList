@@ -2,7 +2,7 @@ import {Component, OnInit} from "@angular/core";
 
 @Component({
     selector: "app",
-    templateUrl: "./app/app.html"
+    templateUrl: "./build/app/app.html"
 })
 export class AppComponent implements OnInit {
     ngOnInit() {

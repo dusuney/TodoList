@@ -3,7 +3,7 @@ import { TaskService } from "../task.service";
 
 @Component({
     selector: "view-task",
-    templateUrl: "./app/viewTask/viewTask.component.html"
+    templateUrl: "./build/app/viewTask/viewTask.component.html"
 })
 export class ViewTaskComponent {
     ngOnInit() {

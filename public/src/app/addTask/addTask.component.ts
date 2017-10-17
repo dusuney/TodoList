@@ -4,7 +4,7 @@ import { Task } from "../task";
 
 @Component({
     selector: "add-task",
-    templateUrl: "./app/addTask/addTask.component.html"
+    templateUrl: "./build/app/addTask/addTask.component.html"
 })
 export class AddTaskComponent {
     task: Task = { id: -1, name: '', text: '' };

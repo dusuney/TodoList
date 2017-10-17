@@ -4,7 +4,7 @@ import { TaskService } from "../task.service";
 
 @Component({
     selector: "tasks",
-    templateUrl: "./app/tasks/tasks.component.html"
+    templateUrl: "./build/app/tasks/tasks.component.html"
 })
 export class TasksComponent {
     tasks: Task[];

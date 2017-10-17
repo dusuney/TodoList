@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+
+  <link rel="stylesheet" href="build/lib/bootstrap/dist/css/bootstrap.min.css">
+  <!-- 1. Load libraries -->
+  <!-- Polyfill(s) for older browsers -->
+  <script src="build/lib/core-js/client/shim.min.js"></script>
+
+  <script src="build/lib/zone.js/dist/zone.js"></script>
+  <script src="build/lib/reflect-metadata/Reflect.js"></script>
+  <script src="build/lib/systemjs/dist/system.src.js"></script>
+
+  <!-- 2. Configure SystemJS -->
+  <script src="build/systemjs.config.js"></script>
+  <script>
+    System.import('app')
+      .then(null, console.error.bind(console));
+  </script>
+</head>
+
+<body>
+  <app>Loading...</app>
+</body>
+
+</html>
