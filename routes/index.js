@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-var getAllPuppies = require('../workers/getAllPuppies');
 
 var express = require('express');
 var app = express();
@@ -11,9 +10,9 @@ router.get('/', function(req, res, next) {
 });
 
 
- router.get('/api/puppies', require('../workers/getAllPuppies'));
- router.get('/api/puppies/:id', require('../workers/getSinglePuppy'));
-// router.post('/api/puppies', db.createPuppy);
+ router.get('/api/tasks', require('../workers/getAllTasks'));
+ router.get('/api/tasks/:id', require('../workers/getSingleTask'));
+ router.post('/api/tasks/', require('../workers/addSingleTask'));
 // router.put('/api/puppies/:id', db.updatePuppy);
 // router.delete('/api/puppies/:id', db.removePuppy);
 

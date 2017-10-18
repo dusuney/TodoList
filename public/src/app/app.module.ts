@@ -9,12 +9,14 @@ import { TasksComponent } from "./tasks/tasks.component";
 import { routing, appRoutingProviders } from './app.routing';
 import { FormsModule } from "@angular/forms";
 import {TaskService} from './task.service';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        routing
+        routing,
+        HttpModule
     ],
     declarations: [
         AppComponent,

@@ -7,7 +7,7 @@ import { Task } from "../task";
     templateUrl: "./build/app/addTask/addTask.component.html"
 })
 export class AddTaskComponent {
-    task: Task = { id: -1, name: '', text: '' };
+    task: Task = { id: null, name: '', text: '' };
 
     ngOnInit() {
         console.log("Application component initialized ...");
