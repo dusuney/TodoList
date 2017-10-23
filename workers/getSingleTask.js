@@ -1,8 +1,14 @@
 var db = require('../query');
 
+var sql = require('sql');
+var tasks = require('../models/tasks');
+
+
 module.exports = function getSinglePuppy(req, res, next) {
-    var pupID = parseInt(req.params.id);
-    db.one('select * from pups where id = $1', pupID)
+    var id = parseInt(req.params.id);
+    var query = tasks.select(tasks.star()).from(tasks).where(tasks.id.equals(id)).toQuery();
+
+    db.one(query)
         .then(function (data) {
             res.status(200)
                 .json({

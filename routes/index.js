@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
  router.get('/api/tasks', require('../workers/getAllTasks'));
  router.get('/api/tasks/:id', require('../workers/getSingleTask'));
  router.post('/api/tasks/', require('../workers/addSingleTask'));
-// router.put('/api/puppies/:id', db.updatePuppy);
-// router.delete('/api/puppies/:id', db.removePuppy);
+ router.delete('/api/tasks/:id', require('../workers/deleteSingleTask'));
+ router.put('/api/tasks/:id', require('../workers/updateSingleTask'));
 
 module.exports = router;

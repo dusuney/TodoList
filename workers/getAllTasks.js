@@ -1,7 +1,14 @@
 var db = require('../query');
 
+var sql = require('sql');
+var tasks = require('../models/tasks');
+
+
+var query = tasks.select(tasks.star()).from(tasks).toQuery();
+
+
 module.exports = function (req, res, next) {
-    db.any('select * from tasks')
+    db.any(query)
         .then(function (data) {
             res.status(200)
                 .json({

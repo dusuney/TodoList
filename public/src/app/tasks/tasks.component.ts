@@ -10,8 +10,8 @@ export class TasksComponent {
     tasks: Task[];
 
     ngOnInit() {
-        console.log("Application component initialized ...");
-        this.taskService.get()
+        console.log("Application component initialized ...1");
+        this.taskService.getAll()
             .then(data => this.tasks = data);
     }
 

@@ -1,1 +1,13 @@
 <h2>ViewTask</h2>
+
+<div class="col-md-4">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" [(ngModel)]="task.name" name="name" placeholder="enter name task...">
+    <br>
+    <label for="text">Text</label>
+    <textarea type="text" class="form-control" [(ngModel)]="task.text" name="text" placeholder="enter text task..."></textarea>
+    <br>
+    <a class="btn btn-default" role="button" (click)="updateTask()">Сохранить</a>
+    <a class="btn btn-default" role="button" (click)="removeTask()">Удалить</a>
+</div>
+

@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { TaskService } from "../task.service";
 import { Task } from "../task";
+import { Router } from "@angular/router";
 
 @Component({
     selector: "add-task",
@@ -16,8 +17,8 @@ export class AddTaskComponent {
     addTask(): void {
         console.log(this.task);
         this.taskService.create(this.task)
-            .then(task => { });
+            .then(task => { this.router.navigate(['tasks']);});
     }
 
-    constructor(public taskService: TaskService) { }
+    constructor(private taskService: TaskService, private router: Router) { }
 }
