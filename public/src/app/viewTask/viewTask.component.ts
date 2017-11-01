@@ -36,8 +36,8 @@ export class ViewTaskComponent {
         private router: Router) {
     }
 
-    private removeTask(): void {
-        this.taskService.remove(this.id).then(() => { this.router.navigate(['tasks']);});
+    private deleteTask(): void {
+        this.taskService.delete(this.id).then(() => { this.router.navigate(['tasks']);});
 
     }
 

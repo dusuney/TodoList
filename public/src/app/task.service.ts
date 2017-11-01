@@ -49,7 +49,7 @@ export class TaskService {
             .catch(this.handleError);
     }
 
-    remove(id: number): Promise<Task> {
+    delete(id: number): Promise<Task> {
         const url = `${this.tasksUrl}/${id}`;
         return this.http
             .delete(url, { headers: this.headers })
